@@ -6,4 +6,4 @@ def home(request):
   return HttpResponse('<h1>Drag Queen Collector</h1>')
 
 def about(request):
-  return HttpResponse('<h1>About the Drag Queen Collector</h1>')
+  return HttpResponse(request, 'about.html')
