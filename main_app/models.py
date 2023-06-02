@@ -5,7 +5,7 @@ class Queen(models.Model):
   name = models.CharField(max_length=100)
   season = models.IntegerField()
   winner = models.BooleanField(default=False)
-  allstars = models.IntegerField()
+  allstars = models.IntegerField(null=True, blank=True, default=0)
   winnerofallstars = models.BooleanField(default=False)
   specialty = models.CharField(max_length=250)
   instagramhandle = models.CharField(max_length=100)
