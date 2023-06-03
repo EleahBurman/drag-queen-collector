@@ -16,4 +16,15 @@ class DragQueen(models.Model):
   
   def get_absolute_url(self):
       return reverse("dragqueen_detail", kwargs={"dragqueen_id": self.id})
+    
+class Outfit(models.Model):
+  date = models.DateField()
+  clothes = models.CharField(max_length=100)
+  wigs = models.CharField(max_length=100)
+  
+  dragqueen = models.ForeignKey(DragQueen, on_delete=models.CASCADE)
+  
+  def __str__(self):
+    return f"{self.dragqueen} wore {self.get_clothes_display()} and {self.get_wigs_display()} on {self.date}"
+  
   

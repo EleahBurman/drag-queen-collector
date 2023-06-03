@@ -38,5 +38,38 @@
     <a href="{% url 'dragqueen-delete' dragqueen.id %}" class ="btn danger">Delete</a>
   </div>
 </section>
+<div class="outfits-performances-container">
+  <section class="outfits">
+    <div class="subsection-title">
+      <h2>Outfits</h2>
+      <img 
+        src="{% static 'images/alaska.png' %}" 
+        alt="Alaska"
+      />
+      <img 
+        src="{% static 'images/biancadelrio.png' %}"
+        alt="Bianca"
+      />
+      <img 
+        src="{% static 'images/Shangela.png' %}" 
+        alt="Shangela"
+      />
+    </div>
+    <table>
+      <thead>
+        <tr><th>Date</th><th>Clothes</th><th>Wigs</th></tr>
+      </thead>
+      <tbody>
+        {% for outfit in dragqueen.outfit_set.all %}
+          <tr>
+            <td>{{outfit.date}}</td>
+            <td>{{outfit.get_clothes_display}}</td>
+            <td>{{outfit.get_wigs_display}}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+</div>
 
 {% endblock %}
