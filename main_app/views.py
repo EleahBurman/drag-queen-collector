@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Queen
 
 def home(request):
@@ -19,3 +19,12 @@ def dragqueen_detail(request, dragqueen_id):
 class QueenCreate(CreateView):
   model = Queen
   fields = ['name', 'season', 'winner', 'allstars', 'winnerofallstars', 'specialty', 'instagramhandle']
+  success_url = '/dragqueens/'
+  
+class QueenUpdate(UpdateView):
+  model = Queen
+  fields = ['season', 'winner', 'allstars', 'winnerofallstars', 'specialty', 'instagramhandle'] 
+  
+class QueenDelete(DeleteView):
+  model = Queen
+  success_url = '/dragqueens/'

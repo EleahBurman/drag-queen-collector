@@ -33,6 +33,10 @@
   <br/>
   <p><small>Follow her <a href="http://www.instagram.com/{{dragqueen.instagramhandle}}">here</a></small></p>
   </div>
+  <div class="dragqueen-actions">
+    <a href="{% url 'dragqueen-update' dragqueen.id %}" class ="btn warn">Edit</a>
+    <a href="{% url 'dragqueen-delete' dragqueen.id %}" class ="btn danger">Delete</a>
+  </div>
 </section>
 
 {% endblock %}
