@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link 
+  rel="stylesheet" 
+  type="text/css" 
+  href="{% static 'css/dragqueens/dragqueen-detail.css' %}"
+/>
+{% endblock %}
+
+{% block content %}
+
+<section class="dragqueen-container">
+  <div class="card">
+    <img 
+      src="{% static 'images/katya.png' %}" 
+      alt="Katya"
+      class="katya-img"
+    >
+  </div>
+  <div class="dragqueen-details">
+    {% if dragqueen.winner %}
+      <p>A winner, darling, on season {{ dragqueen.season }}</p>
+    {% elif dragqueen.winnerofallstars %}
+      <p>A winner, darling, on all-stars season {{ dragqueen.allstars}}
+    {% elif dragqueen.allstars %}
+      <p>A winner in our hearts on season {{ dragqueen.season }} and all-stars season {{dragqueen.allstars}}</p>
+    {% else %}
+      <p>There's always All-Stars!</p>
+    {% endif %}
+  <p><small>Known for her {{ dragqueen.specialty }}.</p>
+  <br/>
+  <p><small>Follow her <a href="http://www.instagram.com/{{dragqueen.instagramhandle}}">here</a></small></p>
+  </div>
+</section>
+
+{% endblock %}
