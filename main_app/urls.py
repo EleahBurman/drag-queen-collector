@@ -9,5 +9,6 @@ urlpatterns = [
   path('dragqueens/create/', views.DragQueenCreate.as_view(), name='dragqueen-create'),
   path('dragqueens/<int:pk>/update/', views.DragQueenUpdate.as_view(), name='dragqueen-update'),
   path('dragqueens/<int:pk>/delete/', views.DragQueenDelete.as_view(), name='dragqueen-delete'),
+  path('dragqueens/<int:dragqueen_id>/add-outfit/', views.add_outfit, name='add-outfit'),
   
 ]

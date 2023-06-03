@@ -3,10 +3,20 @@
 
 {% block head %}
 <link 
+  href="https://cdn.jsdelivr.net/npm/mc-datepicker/dist/mc-calendar.min.css" 
+  rel="stylesheet" 
+/>
+<link rel="stylesheet" href="{% static 'css/mcdp.css' %}">
+<script 
+  src="https://cdn.jsdelivr.net/npm/mc-datepicker/dist/mc-calendar.min.js"
+>
+</script>
+<link 
   rel="stylesheet" 
   type="text/css" 
   href="{% static 'css/dragqueens/dragqueen-detail.css' %}"
 />
+<script defer src="{% static 'js/dragqueen-detail.js' %}"></script>
 {% endblock %}
 
 {% block content %}
@@ -57,13 +67,14 @@
     </div>
     <h3>Add an Outfit</h3>
     <form
+      action="{% url 'add-outfit' dragqueen.id %}"
       method="post"
       class="subsection-content"
       autocomplete="off"
     >
     {% csrf_token %}
     {{ outfit_form.as_p }}
-    <button type="submit" class="btn submit">Add Outfit</button>
+    <button type="submit" class="btn submit">Add an Outfit</button>
   </form>
   <h3>Past Outfits</h3>
     <table>
@@ -74,8 +85,8 @@
         {% for outfit in dragqueen.outfit_set.all %}
           <tr>
             <td>{{outfit.date}}</td>
-            <td>{{outfit.get_clothes_display}}</td>
-            <td>{{outfit.get_wig_display}}
+            <td>{{outfit.clothes}}</td>
+            <td>{{outfit.wig}}
           </tr>
         {% endfor %}
       </tbody>

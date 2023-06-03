@@ -24,7 +24,10 @@ class Outfit(models.Model):
   
   dragqueen = models.ForeignKey(DragQueen, on_delete=models.CASCADE)
   
-  def __str__(self):
-    return f"{self.dragqueen} wore {self.get_clothes_display()} and {self.get_wig_display()} on {self.date}"
+def __str__(self):
+    return f"{self.dragqueen} wore {self.clothes} and {self.wig} on {self.date}"
+
   
+class Meta:
+    ordering = ['-date']
   
