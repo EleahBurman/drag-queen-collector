@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import DragQueen
+from .forms import OutfitForm
 
 def home(request):
   return render(request, 'home.html')
@@ -14,7 +15,9 @@ def dragqueen_index(request):
 
 def dragqueen_detail(request, dragqueen_id):
   dragqueen = DragQueen.objects.get(id=dragqueen_id)
-  return render(request, 'dragqueens/detail.html', {'dragqueen': dragqueen})
+  outfit_form = OutfitForm()
+  return render(request, 'dragqueens/detail.html', {
+    'dragqueen': dragqueen, 'outfit_form': outfit_form})
 
 class DragQueenCreate(CreateView):
   model = DragQueen

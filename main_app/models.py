@@ -20,11 +20,11 @@ class DragQueen(models.Model):
 class Outfit(models.Model):
   date = models.DateField()
   clothes = models.CharField(max_length=100)
-  wigs = models.CharField(max_length=100)
+  wig = models.CharField(max_length=100)
   
   dragqueen = models.ForeignKey(DragQueen, on_delete=models.CASCADE)
   
   def __str__(self):
-    return f"{self.dragqueen} wore {self.get_clothes_display()} and {self.get_wigs_display()} on {self.date}"
+    return f"{self.dragqueen} wore {self.get_clothes_display()} and {self.get_wig_display()} on {self.date}"
   
   
