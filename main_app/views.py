@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic.edit import CreateView
 from .models import Queen
 
 def home(request):
@@ -14,3 +15,7 @@ def dragqueen_index(request):
 def dragqueen_detail(request, dragqueen_id):
   dragqueen = Queen.objects.get(id=dragqueen_id)
   return render(request, 'dragqueens/detail.html', {'dragqueen': dragqueen})
+
+class QueenCreate(CreateView):
+  model = Queen
+  fields = ['name', 'season', 'winner', 'allstars', 'winnerofallstars', 'specialty', 'instagramhandle']
