@@ -8,7 +8,11 @@
 {% block content %}
 
 <div class="page-header">
-  <h1>Add a Queen</h1>
+  {% if dragqueen %}
+    <h1>Edit {{ dragqueen.name }}</h1>
+    {% else %}
+    <h1>Add a Queen</h1>
+  {% endif %}
   <img src="{% static 'images/alaska.png' %}" alt="Alaska"/>
 </div>
 <form action="" method="post" class="form-container">

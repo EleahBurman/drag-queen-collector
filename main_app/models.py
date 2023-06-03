@@ -2,7 +2,7 @@ from django.db import models
 from django.urls import reverse
 
 # Create your models here.
-class Queen(models.Model):
+class DragQueen(models.Model):
   name = models.CharField(max_length=100)
   season = models.IntegerField()
   winner = models.BooleanField(default=False)

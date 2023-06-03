@@ -1,5 +1,5 @@
 from django.contrib import admin
 
-from .models import Queen
+from .models import DragQueen
 
-admin.site.register(Queen)
+admin.site.register(DragQueen)
