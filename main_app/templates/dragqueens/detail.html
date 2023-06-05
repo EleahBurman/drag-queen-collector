@@ -101,8 +101,6 @@
       </tbody>
     </table>
   </section>
-  {% endif %}
-</section> 
 <section class="performances">
   <div class="subsection-title">
     <h2>Performances</h2>
@@ -119,7 +117,8 @@
             class="color-block"
           ></div>
           <a href="{% url 'performance-detail' performance.id %}">
-            <p>{{performance.show}} at {{performance.venue}} on {{performance.date}} at {{performance.time}}</p>
+            <h3>{{performance.show}} on {{performance.date}} </h3>
+            <p>Buy tickets <a href="{{ performance.website }}">here</a></p>
           </a>
         </div>
       {% endfor %}
@@ -129,6 +128,31 @@
   </div>
   <h3>Available Performances</h3>
   <div class="subsection-content">
+    {% if performances.count %}
+      {% for performance in performances.all %}
+        <div class="performance-container">
+          <div class="inline-block">
+            <a href="{% url 'performance-detail' performance.id %}">
+              <img 
+                src="{% static 'images/rupaul.png' %}"
+                alt="Rupaul"
+                class="rupaul-img"
+                width= "50px"
+              />
+              <h3>{{performance.show}} on {{performance.date}}</h3>
+            </a>
+          </div>
+          <form action="{% url 'assoc-performance' dragqueen.id performance.id %}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn submit">Add Performance</button>
+          </form>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p class="all-performances">
+        {{dragqueen.name}} is fully booked 🥳
+      </p>
+    {% endif %}
   </div>
 </section>
 </div>

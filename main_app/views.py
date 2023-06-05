@@ -16,9 +16,10 @@ def dragqueen_index(request):
 
 def dragqueen_detail(request, dragqueen_id):
   dragqueen = DragQueen.objects.get(id=dragqueen_id)
+  performances_dragqueen_not_performing_at = Performance.objects.exclude(id__in = dragqueen.performances.all().values_list('id'))
   outfit_form = OutfitForm()
   return render(request, 'dragqueens/detail.html', {
-    'dragqueen': dragqueen, 'outfit_form': outfit_form})
+    'dragqueen': dragqueen, 'outfit_form': outfit_form, 'performances': performances_dragqueen_not_performing_at})
 
 def add_outfit(request, dragqueen_id):
     if request.method == 'POST':
@@ -65,3 +66,7 @@ class PerformanceUpdate(UpdateView):
 class PerformanceDelete(DeleteView):
   model = Performance
   success_url = '/performances/'
+  
+def assoc_performance(request, dragqueen_id, performance_id):
+  DragQueen.objects.get(id=dragqueen_id).performances.add(performance_id)
+  return redirect('dragqueen-detail', dragqueen_id=dragqueen_id)
