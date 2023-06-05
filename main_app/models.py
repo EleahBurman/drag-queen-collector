@@ -12,6 +12,13 @@ class DragQueen(models.Model):
   specialty = models.CharField(max_length=250)
   instagramhandle = models.CharField(max_length=100)
   
+  def is_dressed_for_today(self):
+    today = date.today()
+    has_outfit = self.outfit_set.get(date=today)
+    if has_outfit:
+      return f"{self.name} is dressed and ready to impress today!"
+    else:
+      return f"{self.name} needs an outfit for today!"
   def __str__(self):
     return self.name
   
