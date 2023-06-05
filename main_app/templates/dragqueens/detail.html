@@ -101,6 +101,37 @@
       </tbody>
     </table>
   </section>
+  {% endif %}
+</section> 
+<section class="performances">
+  <div class="subsection-title">
+    <h2>Performances</h2>
+    <img src="{% static 'images/bendelacreme.png' %}" alt="Ben De La Creme" />
+    <img src="{% static 'images/latrice.png' %}" alt="Latrice Royale" />
+    <img src="{% static 'images/manila.png' %}" alt="Manila Luzon" />
+  </div>
+  <h3>{{ dragqueen.name }}'s Performances</h3>
+  <div class="subsection-content">
+    {% if dragqueen.performances.count %}
+      {% for performance in dragqueen.performances.all %}
+        <div class="performance-container">
+          <div 
+            class="color-block"
+          ></div>
+          <a href="{% url 'performance-detail' performance.id %}">
+            <p>{{performance.show}} at {{performance.venue}} on {{performance.date}} at {{performance.time}}</p>
+          </a>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p class="no-performances">{{dragqueen.name}} doesn't have any performances 😞</p>
+    {% endif %}
+  </div>
+  <h3>Available Performances</h3>
+  <div class="subsection-content">
+  </div>
+</section>
+</div>
 </div>
 
 {% endblock %}

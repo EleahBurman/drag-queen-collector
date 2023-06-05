@@ -1,0 +1,26 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block head %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/performances/performance-detail.css' %}"
+/>
+{% endblock %}
+
+{% block content %}
+  
+<div class="card">
+  <div class="card-bg"></div>
+  <div class="card-content">
+    <h2>{{ performance.show }}</h2>
+    <p>Venue: {{ performance.venue }}</p>
+    <p>Date: {{ performance.date }} </p>
+    <p>Time: {{ performance.time}}</p>
+  </div>
+</div>
+<a href="{% url 'performance-update' performance.id %}" class="btn warn">Edit</a>
+<a href="{% url 'performance-delete' performance.id %}" class="btn danger">Delete</a>
+
+{% endblock %}

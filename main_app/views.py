@@ -1,12 +1,9 @@
 from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, DetailView
 from .models import DragQueen, Performance
 from .forms import OutfitForm
 
-class PerformanceCreate(CreateView):
-  model = Performance
-  fields = '__all__'
-  
 def home(request):
   return render(request, 'home.html')
 
@@ -50,3 +47,21 @@ class DragQueenUpdate(UpdateView):
 class DragQueenDelete(DeleteView):
   model = DragQueen
   success_url = '/dragqueens/'
+  
+class PerformanceCreate(CreateView):
+  model = Performance
+  fields = '__all__'
+  
+class PerformanceList(ListView):
+  model = Performance
+  
+class PerformanceDetail(DetailView):
+  model = Performance
+  
+class PerformanceUpdate(UpdateView):
+  model = Performance
+  fields = ['show', 'venue', 'date', 'time', 'website']
+  
+class PerformanceDelete(DeleteView):
+  model = Performance
+  success_url = '/performances/'
