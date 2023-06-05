@@ -14,7 +14,7 @@ def about(request):
   return render(request, 'about.html')
 
 def dragqueen_index(request):
-  dragqueens = DragQueen.objects.all()
+  dragqueens = DragQueen.objects.filter(user=request.user)
   return render(request, 'dragqueens/index.html', {'dragqueens': dragqueens })
 
 def dragqueen_detail(request, dragqueen_id):
