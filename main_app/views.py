@@ -1,8 +1,12 @@
 from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import DragQueen
+from .models import DragQueen, Performance
 from .forms import OutfitForm
 
+class PerformanceCreate(CreateView):
+  model = Performance
+  fields = '__all__'
+  
 def home(request):
   return render(request, 'home.html')
 

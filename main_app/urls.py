@@ -10,5 +10,5 @@ urlpatterns = [
   path('dragqueens/<int:pk>/update/', views.DragQueenUpdate.as_view(), name='dragqueen-update'),
   path('dragqueens/<int:pk>/delete/', views.DragQueenDelete.as_view(), name='dragqueen-delete'),
   path('dragqueens/<int:dragqueen_id>/add-outfit/', views.add_outfit, name='add-outfit'),
-  
+  path('performances/create/', views.PerformanceCreate.as_view(), name='performance-create'), 
 ]

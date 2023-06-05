@@ -2,7 +2,17 @@ from django.db import models
 from django.urls import reverse
 from datetime import date
 
-# Create your models here.
+class Performance(models.Model):
+  venue = models.CharField(max_length=100, default='Heart')
+  date = models.DateField(default=date.today)
+  website = models.URLField(default='https://www.heartweho.com/', blank=True, null=True)
+  
+  def __str__(self):
+    return f"Performance at {self.venue} on {self.date}"
+  
+  def get_absolute_url(self):
+        return reverse('performance-detail', kwargs={'pk': self.id})
+  
 class DragQueen(models.Model):
   name = models.CharField(max_length=100)
   season = models.IntegerField()
@@ -35,7 +45,7 @@ class Outfit(models.Model):
   dragqueen = models.ForeignKey(DragQueen, on_delete=models.CASCADE)
   
 def __str__(self):
-    return f"{self.dragqueen} wore {self.clothes} and {self.wig} on {self.date}"
+    return f"{self.dragqueen} wore {self.clothes} and {self.wig} and {self.makeup} and {self.nails} on {self.date}"
   
 class Meta:
     ordering = ['-date']
