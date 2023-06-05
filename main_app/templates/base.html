@@ -29,11 +29,16 @@
     </div>
     <nav>
       <ul>
-        <li><a href="{% url 'dragqueen-index' %}">All Queens</a></li>
-        <li><a href="{% url 'performance-index' %}">All Performances</a></li>
-        <li><a href="{% url 'dragqueen-create' %}">Add a Queen</a></li>
-        <li><a href="{% url 'performance-create' %}">Add a Performance</a></li>
-        <li><a href="{% url 'about' %}">About</a></li>
+        {% if user.is_authenticated %}
+          <li><a href="{% url 'dragqueen-index' %}">All Queens</a></li>
+          <li><a href="{% url 'performance-index' %}">All Performances</a></li>
+          <li><a href="{% url 'dragqueen-create' %}">Add a Queen</a></li>
+          <li><a href="{% url 'performance-create' %}">Add a Performance</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+        {% else %}
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'home' %}">Login</a></li>
+        {% endif %}
       </ul>
     </nav>
   </header>
