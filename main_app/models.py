@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from datetime import date
 
 # Create your models here.
 class DragQueen(models.Model):
@@ -18,7 +19,7 @@ class DragQueen(models.Model):
       return reverse("dragqueen_detail", kwargs={"dragqueen_id": self.id})
     
 class Outfit(models.Model):
-  date = models.DateField()
+  date = models.DateField(default=date.today)
   clothes = models.CharField(max_length=100, default='Body Suit')
   wig = models.CharField(max_length=100, default= 'Teased Blonde Wig')
   makeup = models.CharField(max_length=100, default='Winged Eyeliner')
