@@ -42,6 +42,10 @@ class DragQueenCreate(CreateView):
   fields = ['name', 'season', 'winner', 'allstars', 'winnerofallstars', 'specialty', 'instagramhandle']
   success_url = '/dragqueens/'
   
+  def form_valid(self, form):
+    form.instance.user = self.request.user
+    return super().form_valid(form)
+  
 class DragQueenUpdate(UpdateView):
   model = DragQueen
   fields = ['season', 'winner', 'allstars', 'winnerofallstars', 'specialty', 'instagramhandle'] 
