@@ -1,6 +1,8 @@
 from django.db import models
 from django.urls import reverse
 from datetime import date, datetime
+from django.contrib.auth.models import User
+
 class Performance(models.Model):
   show = models.CharField(max_length=200, default='Planet Pride')
   venue = models.CharField(max_length=100, default='Heart')
@@ -31,6 +33,7 @@ class DragQueen(models.Model):
   specialty = models.CharField(max_length=250)
   instagramhandle = models.CharField(max_length=100)
   performances = models.ManyToManyField(Performance)
+  user = models.ForeignKey(User, on_delete=models.CASCADE)
   
   def is_dressed_for_today(self):
     today = date.today()

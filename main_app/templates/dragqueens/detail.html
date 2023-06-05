@@ -117,8 +117,13 @@
             class="color-block"
           ></div>
           <a href="{% url 'performance-detail' performance.id %}">
-            <h3>{{performance.show}} on {{performance.date}} </h3>
-            <p>Buy tickets <a href="{{ performance.website }}">here</a></p>
+            <img 
+            src="{% static 'images/rupaul.png' %}"
+            alt="Rupaul"
+            class="rupaul-img"
+            width= "50px"
+            />
+            <h3>{{performance.show}}</h3>
           </a>
         </div>
       {% endfor %}
@@ -139,7 +144,7 @@
                 class="rupaul-img"
                 width= "50px"
               />
-              <h3>{{performance.show}} on {{performance.date}}</h3>
+              <h3>{{performance.show}}</h3>
             </a>
           </div>
           <form action="{% url 'assoc-performance' dragqueen.id performance.id %}" method="post">
