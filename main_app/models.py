@@ -19,8 +19,10 @@ class DragQueen(models.Model):
     
 class Outfit(models.Model):
   date = models.DateField()
-  clothes = models.CharField(max_length=100)
-  wig = models.CharField(max_length=100)
+  clothes = models.CharField(max_length=100, default='Body Suit')
+  wig = models.CharField(max_length=100, default= 'Teased Blonde Wig')
+  makeup = models.CharField(max_length=100, default='Winged Eyeliner')
+  nails = models.BooleanField(default=False)
   
   dragqueen = models.ForeignKey(DragQueen, on_delete=models.CASCADE)
   

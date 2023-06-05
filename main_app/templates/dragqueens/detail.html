@@ -79,14 +79,22 @@
   <h3>Past Outfits</h3>
     <table>
       <thead>
-        <tr><th>Date</th><th>Clothes</th><th>Wigs</th></tr>
+        <tr>
+          <th>Date</th>
+          <th>Clothes</th>
+          <th>Wigs</th>
+          <th>Makeup</th>
+          <th>Nails</th>
+        </tr>
       </thead>
       <tbody>
         {% for outfit in dragqueen.outfit_set.all %}
           <tr>
             <td>{{outfit.date}}</td>
             <td>{{outfit.clothes}}</td>
-            <td>{{outfit.wig}}
+            <td>{{outfit.wig}}</td>
+            <td>{{outfit.makeup}}</td>
+            <td>{{outfit.nails}}</td>
           </tr>
         {% endfor %}
       </tbody>
