@@ -94,7 +94,7 @@
             <td>{{outfit.clothes}}</td>
             <td>{{outfit.wig}}</td>
             <td>{{outfit.makeup}}</td>
-            <td>{{outfit.nails}}</td>
+            <td>{% if outfit.nails %}Yes{% else %}No{% endif %}</td>
           </tr>
         {% endfor %}
       </tbody>
