@@ -18,6 +18,7 @@
     <p>Venue: {{ performance.venue }}</p>
     <p>Date: {{ performance.date }} </p>
     <p>Time: {{ performance.time}}</p>
+    <p class="website">Website: <a href="{{ performance.website }}" id="clickhere">Click Here</a></p>
   </div>
 </div>
 <a href="{% url 'performance-update' performance.id %}" class="btn warn">Edit</a>

@@ -50,15 +50,6 @@ p.no-performances{
   align-items: left;
 }
 
-a {
-  text-decoration: none;
-  color: #f543a1;
-}
-
-a :hover{
-  color: #f50887;
-}
-
 .outfits-performances-container {
   display: flex;
   flex-direction: column;

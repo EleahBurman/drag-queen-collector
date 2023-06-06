@@ -17,6 +17,21 @@ html {
   font-size: 62.5%
 }
 
+a:-webkit-any-link {
+  text-decoration: none;
+  color: #f543a1;
+}
+
+a:-webkit-any-link :hover{
+  color: #f50887;
+  text-decoration: none;
+}
+
+a:-webkit-any-link :visited{
+  color: #f543a1;
+  text-decoration: none;
+}
+
 body {
   margin: 0;
   display: flex;
@@ -33,9 +48,9 @@ body {
   --link-hover-color: #f50887;
   --button-bg: rgb(245, 245, 245);
   --button-bg-hover: rgb(226, 226, 226);
-  --submit: rgb(26, 128, 0);
-  --warn: rgb(255, 102, 0);
-  --danger: rgb(220, 20, 30);
+  --submit: #f543a1;
+  --warn: #f543a1;
+  --danger: #f543a1;
   --secondary: rgb(57, 57, 57);
   --card-box-shadow: 5px 5px 6px -1px #AAA;
   --font-xtreme: 4.2rem;
