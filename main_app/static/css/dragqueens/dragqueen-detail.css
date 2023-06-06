@@ -4,6 +4,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border: #f543a1 solid 2px;
+  box-shadow:  5px 5px 6px -1px #AAA;
+  margin-bottom: 40px;
 }
 
 .katya-img {
