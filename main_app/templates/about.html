@@ -1,11 +1,26 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
+<section class="page-header">
+  <h1 class='titletext'>About the Drag Queen Collector</h1>
+  <img 
+    src="{% static 'images/rupaul2.png' %}" 
+    alt="Rupaul"
+    class="rupaul-about"
+  >
+</section>
+<div class="aboutcard">
+  <img 
+  src="{% static 'images/quote.png' %}" 
+  alt="quote"
+  class="quote"
+>
+  <h2> If you can't love yourself,</h2>
+  <h2>how in the hell</h2>
+  <h2>are you gonna love somebody else?</h2>
+  <h3 class="italic"> RUPAUL CHARLES</h3>
 
-<h1>About the Drag Queen Collector</h1>
-<hr />
-<p class="page-content">
-  Living life by the following quote: "If you can't love yourself, how in the hell are you gonna love somebody else?" - RuPaul Charles
-</p>
+</div>
 
 {% endblock %}

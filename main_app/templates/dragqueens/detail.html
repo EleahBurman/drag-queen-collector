@@ -187,6 +187,7 @@
         <th>Wigs</th>
         <th>Makeup</th>
         <th>Nails</th>
+        {% comment %} <th>Delete</th> {% endcomment %}
       </tr>
     </thead>
     <tbody>
@@ -196,8 +197,14 @@
           <td>{{outfit.clothes}}</td>
           <td>{{outfit.wig}}</td>
           <td>{{outfit.makeup}}</td>
-          <td>{% if outfit.nails %}Yes{% else %}No{% endif %}</td>
-          {% comment %} <a href="{% url 'delete-outfit' dragqueen_id outfit.id %}" class ="btn danger">Delete Outfit</a> {% endcomment %}
+          <td>
+            {% if outfit.nails %}Yes{% else %}No{% endif %}
+          </td>
+          {% comment %} <td>
+            {%if outfit %}
+              <a href="{% url 'delete-outfit' dragqueen.id outfit.id %}" class ="btn danger">X</a>
+            {% endif %}
+          </td> {% endcomment %}
         </tr>
       {% endfor %}
     </tbody>

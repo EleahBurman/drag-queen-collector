@@ -32,6 +32,10 @@ a:-webkit-any-link :visited{
   text-decoration: none;
 }
 
+h1.titletext {
+  font: 42px;
+}
+
 body {
   margin: 0;
   display: flex;
@@ -124,6 +128,8 @@ nav li {
   display: flex;
   align-items: center;
   margin: 10px;
+  max-height: 50px;
+  padding: 0;
 }
 
 .btn {
@@ -185,6 +191,23 @@ nav li {
   font-size: var(--font-reg);
 }
 
+.rupaul-about {
+  width: 30%;
+  max-width: 100px;
+}
+
+.aboutcard{
+  border: #f543a1 solid 2px;
+  box-shadow:  5px 5px 6px -1px #AAA;
+  max-width: fit-content;
+  text-align: left;
+  margin: auto;
+  padding: 10px;
+}
+
+.italic{
+  font-style: italic;
+}
 @media only screen and (min-width: 768px) {
   header {
     position: sticky;

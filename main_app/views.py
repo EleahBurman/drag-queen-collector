@@ -44,15 +44,15 @@ def add_outfit(request, dragqueen_id):
     
     return render(request, 'add_outfit.html', {'form': form})
 
-# def delete_outfit(request, drag_queen_id, outfit_id):
-#     drag_queen = get_object_or_404(DragQueen, id=drag_queen_id)
-#     outfit = get_object_or_404(Outfit, id=outfit_id, drag_queen=drag_queen)
+# def delete_outfit(request, dragqueen_id, pk):
+#     dragqueen = get_object_or_404(DragQueen, id=dragqueen_id)
+#     outfit = get_object_or_404(Outfit, id=pk, dragqueen=dragqueen)
 
 #     if request.method == 'POST':
 #         outfit.delete()
-#         return redirect('dragqueen-detail', drag_queen_id=drag_queen_id)
+#         return redirect('dragqueen-detail', dragqueen_id=dragqueen_id)
 #     elif request.method == 'GET':
-#         return render(request, 'delete_outfit_confirm.html', {'outfit': outfit})
+#         return render(request, 'main_app/delete_outfit_confirm.html',  {'dragqueen': dragqueen}, {'outfit': outfit})
       
 class DragQueenCreate(LoginRequiredMixin, CreateView):
   model = DragQueen
