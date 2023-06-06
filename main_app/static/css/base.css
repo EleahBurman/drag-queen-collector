@@ -123,6 +123,7 @@ nav li {
   cursor: pointer;
   font-family: inherit;
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .btn:hover {
@@ -142,11 +143,13 @@ nav li {
 .warn {
   color: var(--warn);
   border-color: var(--warn);
+  margin-bottom: 10px;
 }
 
 .danger {
   color: var(--danger);
   border-color: var(--danger);
+  margin-top: 10px;
 }
 
 .page-header h1 {

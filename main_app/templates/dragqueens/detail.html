@@ -66,7 +66,9 @@
       />
     </div>
     <h3>Add an Outfit</h3>
-    <h4>{{ dragqueen.is_dressed_for_today }}</h4>
+    <div class="dressed">
+      <h4>{{ dragqueen.is_dressed_for_today }}</h4>
+    </div>
     <form
       action="{% url 'add-outfit' dragqueen.id %}"
       method="post"
@@ -113,9 +115,6 @@
     {% if dragqueen.performances.count %}
       {% for performance in dragqueen.performances.all %}
         <div class="performance-container">
-          <div 
-            class="color-block"
-          ></div>
           <a href="{% url 'performance-detail' performance.id %}">
             <img 
             src="{% static 'images/rupaul.png' %}"

@@ -26,10 +26,26 @@
 }
 
 .dragqueen-actions {
+  display: flex;
+  align-items: center;
   margin-top: 20px;
 }
 
-.feedings-toy-container {
+.dressed {
+  font-size: 20px;
+  color: #f543a1;
+}
+
+a {
+  text-decoration: none;
+  color: #f543a1;
+}
+
+a :hover{
+  color: #f50887;
+}
+
+.outfits-performances-container {
   display: flex;
   flex-direction: column;
   padding-bottom: 20px;
@@ -46,12 +62,15 @@
   margin: 0 8px;
 }
 
-.performance-container {
+.performance-container a{
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  margin-bottom: 5px;
 }
 
+.performance-container a h3{
+  font-size: 20px;
+}
 
 .no-performances,
 .all-performances {
@@ -169,6 +188,7 @@
 .performances-container .btn {
   padding: 3px 10px;
   margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 #file-input {
@@ -180,6 +200,10 @@
 
 #file-name {
   margin-bottom: 10px;
+}
+
+a.warn, a.danger{
+  margin: 5px;
 }
 
 @media only screen and (min-width: 768px) {
