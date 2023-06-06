@@ -11,9 +11,99 @@
   max-width: 350px;
 }
 
+.rupaul-card-img {
+  width: 75%;
+  max-width: 350px;
+}
+
+.alaska-img{
+  width: 75%;
+  max-width: 350px;
+  margin-left: 40px;
+}
+
 .rupaul-img{
   width: 30%;
   max-width: 100px;
+  margin-left: 40px;
+}
+
+.alyssa-img{
+  width: 75%;
+  max-width: 350px;
+  margin-left: 40px;
+}
+
+.dela-img{
+  width: 75%;
+  max-width: 350px;
+  margin-left: 40px;
+}
+
+.bianca-img{
+  width: 75%;
+  max-width: 350px;
+  margin-left: 40px;
+}
+
+.latrice-img{
+  width: 75%;
+  max-width: 350px;
+  margin-left: 40px;
+}
+
+.manila-img{
+  width: 75%;
+  max-width: 350px;
+  margin-left: 40px;
+}
+
+.willam-img{
+  width: 75%;
+  max-width: 350px;
+  margin-left: 40px;
+}
+
+.shangela-img{
+  width: 75%;
+  max-width: 350px;
+  margin-left: 40px;
+}
+
+.bob-img{
+  width: 75%;
+  max-width: 350px;
+  margin-left: 40px;
+}
+
+.trixie-img{
+  width: 75%;
+  max-width: 350px;
+  margin-left: 40px;
+}
+
+.kimchi-img{
+  width: 75%;
+  max-width: 350px;
+  margin-left: 40px;
+}
+
+.monet-img{
+  width: 75%;
+  max-width: 350px;
+  margin-left: 40px;
+}
+
+.violet-img{
+  width: 75%;
+  max-width: 350px;
+  margin-left: 40px;
+}
+
+.detox-img{
+  width: 75%;
+  max-width: 350px;
+  margin-left: 40px;
 }
 
 .usr-img {
@@ -31,7 +121,7 @@
   margin-top: 20px;
 }
 
-.outfitheader{
+.outfitheader {
   margin: 0;
   padding:0;
 }

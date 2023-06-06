@@ -6,7 +6,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView
-from .models import DragQueen, Performance
+from django.shortcuts import get_object_or_404
+from .models import DragQueen, Performance, Outfit
 from .forms import OutfitForm
 
 class Home(LoginView):
@@ -43,7 +44,16 @@ def add_outfit(request, dragqueen_id):
     
     return render(request, 'add_outfit.html', {'form': form})
 
+# def delete_outfit(request, drag_queen_id, outfit_id):
+#     drag_queen = get_object_or_404(DragQueen, id=drag_queen_id)
+#     outfit = get_object_or_404(Outfit, id=outfit_id, drag_queen=drag_queen)
 
+#     if request.method == 'POST':
+#         outfit.delete()
+#         return redirect('dragqueen-detail', drag_queen_id=drag_queen_id)
+#     elif request.method == 'GET':
+#         return render(request, 'delete_outfit_confirm.html', {'outfit': outfit})
+      
 class DragQueenCreate(LoginRequiredMixin, CreateView):
   model = DragQueen
   fields = ['name', 'season', 'winner', 'allstars', 'winnerofallstars', 'specialty', 'instagramhandle']
