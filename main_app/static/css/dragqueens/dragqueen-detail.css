@@ -31,9 +31,23 @@
   margin-top: 20px;
 }
 
+.outfitheader{
+  margin: 0;
+  padding:0;
+}
+
 .dressed {
-  font-size: 20px;
+  font-size: 18px;
   color: #f543a1;
+  margin: 0;
+  padding:0;
+}
+
+p.no-performances{
+  color: #f543a1;
+  margin: 0;
+  padding:0;
+  align-items: left;
 }
 
 a {
@@ -56,10 +70,6 @@ a :hover{
   display: flex;
   align-items: center;
   margin-bottom: 12px;
-}
-
-.subsection-content {
-  margin: 0 8px;
 }
 
 .performance-container a{

@@ -65,10 +65,8 @@
         alt="Shangela"
       />
     </div>
-    <h3>Add an Outfit</h3>
-    <div class="dressed">
-      <h4>{{ dragqueen.is_dressed_for_today }}</h4>
-    </div>
+    <h3 class="outfitheader">Add an Outfit</h3>
+    <h4 class="dressed">{{ dragqueen.is_dressed_for_today }}</h4>
     <form
       action="{% url 'add-outfit' dragqueen.id %}"
       method="post"
