@@ -25,6 +25,11 @@
     <div class="card-bg"></div>
     <a href="{% url 'performance-detail' performance.id %}">
       <div class="card-content">
+        <img 
+        src="{% static 'images/shangelaperforming.png' %}" 
+        alt="Shangela Performing"
+        class="shangela-performing"
+      >
         <h2>{{ performance.show }}</h2>
         <p>Date: {{ performance.date }} </p>
         <p>Time: {{ performance.time}}</p>
