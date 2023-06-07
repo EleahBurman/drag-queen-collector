@@ -43,11 +43,9 @@ def add_outfit(request, dragqueen_id):
     
     return render(request, 'add_outfit.html', {'form': form})
 
+@login_required
 def delete_outfit(request, dragqueen_id, outfit_id):
-  # DragQueen.objects.get(id=dragqueen_id).outfits.remove(outfit_id)
-  # return redirect('dragqueen-detail', dragqueen_id=dragqueen_id)
   instance=Outfit.objects.get(id=outfit_id)
-  print(instance)
   instance.delete()
   return redirect('dragqueen-detail', dragqueen_id=dragqueen_id)
       
