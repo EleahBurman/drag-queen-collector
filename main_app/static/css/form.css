@@ -4,10 +4,32 @@
   width: 100%;
 }
 
+.label{
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  justify-content: left;
+}
+
+.add-queen .field input[type="checkbox"] {
+  display: flex;
+  margin-left: 0;
+  align-items: left;
+  text-align: left;
+  justify-content: left;
+}
+
+.left-align {
+  margin: 0px;
+  padding: 0;
+}
+
 table {
   padding: 0 40px;
   width: 100%;
   border-spacing: 0 20px;
+  justify-content: left;
 }
 
 th {
@@ -16,15 +38,17 @@ th {
   font-weight: normal;
   vertical-align: top;
   font-size: var(--font-reg);
+  justify-content: left;
 }
 
 td {
   max-width: 60%;
+  justify-content: left;
 }
 
 td > * {
   width: 100%;
-  padding: 2px 4px;
+  padding: 0px;
   font-size: var(--font-l);
 }
 

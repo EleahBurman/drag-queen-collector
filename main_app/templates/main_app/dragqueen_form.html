@@ -17,10 +17,28 @@
 </div>
 <form action="" method="post" class="form-container">
   {% csrf_token %}
-  <table>
-    {{ form.as_table }}
+  <table class="add-queen">
+    <tbody>
+      {% for field in form %}
+      <tr>
+        <td class="label">
+          {% if field.name == 'allstars' %}
+            All Stars:
+          {% elif field.name == 'winnerofallstars' %}
+            Winner of All Stars:
+          {% elif field.name == 'instagramhandle' %}
+            Instagram Handle:
+          {% else %}
+            {{ field.label_tag }}
+          {% endif %}
+        </td>
+        <td class="field {% if field.name == 'winner' or field.name == 'winnerofallstars' or field.name == 'instagramhandle' %}left-align{% endif %}">
+          {{ field }}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
   </table>
   <button type="submit" class="btn submit">Submit!</button>
 </form>
-
 {% endblock %}

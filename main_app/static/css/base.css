@@ -36,6 +36,10 @@ h1.titletext {
   font: 42px;
 }
 
+input[type="checkbox"] {
+  margin-left: 0;
+}
+
 body {
   margin: 0;
   display: flex;
