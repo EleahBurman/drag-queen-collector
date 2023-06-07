@@ -22,6 +22,25 @@ Planning materials can be found [here.](https://trello.com/b/qqtAeKX6/drag-queen
 * [RuPaul's Drag Race](https://www.mtv.com/shows/rupauls-drag-race)
 
 ### 📸 Images
+* [Alaska](https://www.billboard.com/culture/pride/drag-race-all-star-alaska-new-pageant-drag-queen-of-the-year-8503561/)
+* [Alyssa Edwards](https://www.vanityfair.com/hollywood/2018/10/dancing-queen-beyond-alyssa-edwards)
+* [Ben De La Creme](https://rupaulsdragrace.fandom.com/wiki/BenDeLaCreme)
+* [Bianca Del Rio](https://rupaulsdragrace.fandom.com/wiki/Bianca_Del_Rio)
+* [Bob the Drag Queen](https://rupaulsdragrace.fandom.com/wiki/Bob_The_Drag_Queen)
+* [Detox](https://www.gaytimes.co.uk/culture/detox-on-the-drag-race-edit-evil-fans-and-the-future-of-the-show/)
+* [Katya](https://nationaltoday.com/birthday/katya-petrovna-zamolodchikova/)
+* [Kim Chi](https://rupaulsdragrace.fandom.com/wiki/Kim_Chi)
+* [Latrice Royale](https://pridesource.com/article/latrice-royale-is-not-here-for-the-buffoonery-the-drag-race-performer-on-the-importance-of-black-history-month/)
+* [Manila Luzon](https://www.outfrontmagazine.com/manila-luzon-among-first-queens-to-kick-off-digital-drag-fest/)
+* [Monet X Change](https://ew.com/tv/who-did-monet-x-change-hook-up-with-rupauls-drag-race-all-stars-7/)
+* [RuPaul](https://ew.com/tv/2020/02/19/rupauls-drag-race-meet-the-queens-sweepstakes-official-rules/)
+* [RuPaul Logo](https://soundcloud.com/rupaulofficial)\
+* [Shangela](https://shangela.com/)
+* [Shangela Performing](https://www.popsugar.com/entertainment/Shangela-Beyonc%C3%A9-Performance-GLAAD-Media-Awards-Video-45972553)
+* [Trixie Mattel](https://www.allmusic.com/artist/trixie-mattel-mn0003634361/biography)
+* [Valentina Performing](https://csulauniversitytimes.com/drag-queen-valentina-brings-latinx-culture-to-the-luckman/)
+* [Violet Chachki](https://www.gaytimes.co.uk/culture/violet-chachki-reveals-her-conspiracy-theory-about-drag-race-season-7/)
+* [Willam](https://www.timeout.com/newyork/lgbt/willam-talks-about-losing-drag-race-and-winning-the-internet)
 
 ## 🖥️ Technologies Used
 * Python
