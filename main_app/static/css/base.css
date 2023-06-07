@@ -24,7 +24,7 @@ a:-webkit-any-link {
 
 a:-webkit-any-link :hover{
   color: #f50887;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:-webkit-any-link :visited{
@@ -34,10 +34,6 @@ a:-webkit-any-link :visited{
 
 h1.titletext {
   font: 42px;
-}
-
-input[type="checkbox"] {
-  margin-left: 0;
 }
 
 body {

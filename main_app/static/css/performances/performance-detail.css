@@ -5,6 +5,15 @@ main {
   min-height: auto;
 }
 
+#clickhere {
+  color: white;
+}
+
+#clickhere:hover{
+  color: #f50887;
+  text-decoration: underline;
+}
+
 .card {
   width: 224px;
   height: 224px;
