@@ -24,7 +24,7 @@ a:-webkit-any-link {
 
 a:-webkit-any-link :hover{
   color: #f50887;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:-webkit-any-link :visited{
