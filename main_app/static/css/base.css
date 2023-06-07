@@ -51,7 +51,8 @@ body {
   --text-color: #f543a1;
   --link-hover-color: #f50887;
   --button-bg: rgb(245, 245, 245);
-  --button-bg-hover: rgb(226, 226, 226);
+  --button-bg-hover: #f543a1;
+  --button-color-hover: white;
   --submit: #f543a1;
   --warn: #f543a1;
   --danger: #f543a1;
@@ -149,6 +150,7 @@ nav li {
 
 .btn:hover {
   background-color: var(--button-bg-hover);
+  color: var(--button-color-hover);
 }
 
 .submit {
