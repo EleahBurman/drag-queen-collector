@@ -15,12 +15,9 @@ Never miss a beat with the comprehensive performance tracking feature. Stay info
 Drag Queen Collector was born out of an undying passion for the art form of drag. We believe that drag queens are true artists who inspire, entertain, and challenge societal norms. Our mission is to celebrate their talent and provide a platform for drag enthusiasts to connect with their favorite queens in a meaningful way.
 
 ## 💅 Getting Started
-### [Click here to launch Drag Queen Collector]
-(https://dragqueencollector.fly.dev/)
+Planning materials can be found [here.](https://trello.com/b/qqtAeKX6/drag-queen-collector)
 
-[Here](https://trello.com/b/qqtAeKX6/drag-queen-collector) is the link to the planning materials on Trello.
-
-## ✍🏻 Credits and Acknowledgments
+## ✍🏻 Attributions
 * [MC Date Picker](https://mcdatepicker.netlify.app/docs/installation/)
 * [RuPaul's Drag Race](https://www.mtv.com/shows/rupauls-drag-race)
 
