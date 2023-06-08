@@ -1,5 +1,6 @@
 input[type="checkbox"] {
   max-width: 5%;
+  float: left;
 }
 
 input[type="text"] {

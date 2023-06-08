@@ -104,13 +104,13 @@ class Performance(models.Model):
 
   
 class DragQueen(models.Model):
-  name = models.CharField(max_length=100)
-  season = models.IntegerField()
-  winner = models.BooleanField(default=False)
+  name = models.CharField(max_length=100, default='Bianca')
+  season = models.IntegerField(default=6)
+  winner = models.BooleanField(default=True)
   allstars = models.IntegerField(null=True, blank=True, default=0)
   winnerofallstars = models.BooleanField(default=False)
-  specialty = models.CharField(max_length=250)
-  instagramhandle = models.CharField(max_length=100)
+  specialty = models.CharField(max_length=250, default='Comedy')
+  instagramhandle = models.CharField(max_length=100, default='thebiancadelrio')
   performances = models.ManyToManyField(Performance)
   user = models.ForeignKey(User, on_delete=models.CASCADE)
   
