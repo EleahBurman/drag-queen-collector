@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import ListView, DetailView
+from django.urls import reverse
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
@@ -62,7 +63,9 @@ class DragQueenCreate(LoginRequiredMixin, CreateView):
   
 class DragQueenUpdate(LoginRequiredMixin, UpdateView):
   model = DragQueen
-  fields = ['season', 'winner', 'allstars', 'winnerofallstars', 'specialty', 'instagramhandle'] 
+  fields = ['season', 'winner', 'allstars', 'winnerofallstars', 'specialty', 'instagramhandle']
+  def get_success_url(self):
+    return reverse('dragqueen-detail', kwargs={'dragqueen_id': self.object.id})
   
 class DragQueenDelete(LoginRequiredMixin, DeleteView):
   model = DragQueen
