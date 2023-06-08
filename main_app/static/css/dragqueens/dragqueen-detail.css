@@ -148,6 +148,13 @@
   padding:0;
 }
 
+.past-outfits{
+  font-size: 18px;
+  color: #f543a1;
+  margin: 0;
+  padding:0;
+}
+
 p.no-performances {
   color: #f543a1;
   margin: 0;
@@ -264,7 +271,6 @@ p.no-performances {
   width: calc(100% - 16px);
   text-align: left;
   border-collapse: collapse;
-  margin: 0 8px;
 }
 
 .outfits td {
