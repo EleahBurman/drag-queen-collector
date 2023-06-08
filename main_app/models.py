@@ -17,6 +17,45 @@ CLOTHES_CHOICES = (
   ('Silver Sequin Dress', 'Silver Sequin Dress'),
 )
 
+WIG_CHOICES = (
+    ('Brunette A-Line Bob', 'Brunette A-Line Bob'),
+    ('Blonde A-Line Bob', 'Blonde A-Line Bob'),
+    ('Black A-Line Bob', 'Black A-Line Bob'),
+    ('Red A-Line Bob', 'Red A-Line Bob'),
+    ('Pink A-Line Bob', 'Pink A-Line Bob'),
+    ('Purple A-Line Bob', 'Purple A-Line Bob'),
+    ('Brunette Blunt Bob', 'Brunette Blunt Bob'),
+    ('Blonde Blunt Bob', 'Blonde Blunt Bob'),
+    ('Black Blunt Bob', 'Black Blunt Bob'),
+    ('Red Blunt Bob', 'Red Blunt Bob'),
+    ('Pink Blunt Bob', 'Pink Blunt Bob'),
+    ('Purple Blunt Bob', 'Purple Blunt Bob'),
+    ('Brunette Straight Sleek Bob', 'Brunette Straight Sleek Bob'),
+    ('Blonde Straight Sleek Bob', 'Blonde Straight Sleek Bob'),
+    ('Black Straight Sleek Bob', 'Black Straight Sleek Bob'),
+    ('Red Straight Sleek Bob', 'Red Straight Sleek Bob'),
+    ('Pink Straight Sleek Bob', 'Pink Straight Sleek Bob'),
+    ('Purple Straight Sleek Bob', 'Purple Straight Sleek Bob'),
+    ('Brunette Long Straight Hair', 'Brunette Long Straight Hair'),
+    ('Blonde Long Straight Hair', 'Blonde Long Straight Hair'),
+    ('Black Long Straight Hair', 'Black Long Straight Hair'),
+    ('Red Long Straight Hair', 'Red Long Straight Hair'),
+    ('Pink Long Straight Hair', 'Pink Long Straight Hair'),
+    ('Purple Long Straight Hair', 'Purple Long Straight Hair'),
+    ('Brunette Bangs', 'Brunette Bangs'),
+    ('Blonde Bangs', 'Blonde Bangs'),
+    ('Black Bangs', 'Black Bangs'),
+    ('Red Bangs', 'Red Bangs'),
+    ('Pink Bangs', 'Pink Bangs'),
+    ('Purple Bangs', 'Purple Bangs'),
+    ('Brunette Pixie', 'Brunette Pixie'),
+    ('Blonde Pixie', 'Blonde Pixie'),
+    ('Black Pixie', 'Black Pixie'),
+    ('Red Pixie', 'Red Pixie'),
+    ('Pink Pixie', 'Pink Pixie'),
+    ('Purple Pixie', 'Purple Pixie'),
+)
+
 MAKEUP_CHOICES = (
   ('mascara', 'Mascara'),
   ('Face Primer', 'Face Primer'),
@@ -95,7 +134,13 @@ class Outfit(models.Model):
       blank=True, 
       null=True
     )
-    wig = models.CharField(max_length=100, default='Teased Blonde Wig')
+    wig = models.CharField(
+      max_length=100, 
+      choices=WIG_CHOICES,
+      default=WIG_CHOICES[0][0],
+      blank=True, 
+      null=True
+      )
     makeup = models.CharField(
       max_length=100, 
       choices=MAKEUP_CHOICES,
