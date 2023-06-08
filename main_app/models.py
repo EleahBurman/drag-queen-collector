@@ -81,11 +81,13 @@ MAKEUP_CHOICES = (
   ('Blush', 'Blush'),
   ('Bronzer', 'Bronzer'),
 )
-
+def get_default_date():
+    return 'Click Here to Select Date'
+  
 class Performance(models.Model):
   show = models.CharField(max_length=200, default='Planet Pride')
   venue = models.CharField(max_length=100, default='Heart')
-  date = models.DateField('Performance date')
+  date = models.DateField('Performance date', default=get_default_date)
   time = models.CharField(default='8pm',max_length=10)
   website = models.URLField(default='https://www.heartweho.com/', blank=True, null=True)
 
@@ -120,9 +122,9 @@ class DragQueen(models.Model):
   
   def is_dressed_for_today(self):
     return self.outfit_set.filter(date=date.today()).exists()
-
+  
 class Outfit(models.Model):
-    date = models.DateField('Outfit date')
+    date = models.DateField('Outfit date',  default=get_default_date)
     clothes = models.CharField(
       max_length=100, 
       choices=CLOTHES_CHOICES,
