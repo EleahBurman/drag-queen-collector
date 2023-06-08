@@ -33,17 +33,9 @@ def dragqueen_detail(request, dragqueen_id):
 def add_outfit(request, dragqueen_id):
   form = OutfitForm(request.POST)
   if form.is_valid():
-    print('===', form.data)
     new_outfit = form.save(commit=False)
     new_outfit.dragqueen_id = dragqueen_id
-    print(dragqueen_id)
-    makeup_options = request.POST.getlist('makeup')
-    print(makeup_options)
-    new_outfit.makeup = ', '.join(makeup_options)
-    print(new_outfit)
     new_outfit.save()
-  else:
-        print(form.errors)
   return redirect('dragqueen-detail', dragqueen_id=dragqueen_id)
 
 @login_required
