@@ -1,19 +1,19 @@
+.add-performance,
+.add-queen {
+  max-width: 50%;
+  margin: 0;
+}
+
 input[type="checkbox"] {
-  max-width: 5%;
   float: left;
+  max-width: 5%;
+  margin: 0;
 }
 
-input[type="text"] {
-  max-width: 50%;
+.field {
+  max-width: 200px;
 }
 
-input[type="url"] {
-  max-width: 50%;
-}
-
-input[type="number"] {
-  max-width: 50%
-}
 .form-container {
   display: flex;
   flex-direction: column;
@@ -30,11 +30,6 @@ input[type="number"] {
 #left-align{
   display: flex;
   justify-content: flex-start;
-}
-
-#id-winner {
-  order: -1;
-  width: 100%
 }
 
 .left-align {
@@ -76,9 +71,9 @@ td > textarea {
 
 .btn {
   align-self: flex-end;
-  margin-right: 40%;
+  margin-right: 62%;
 }
 
 #performance-btn{
-  margin-right: 50%;
+  margin-right: 65%;
 }

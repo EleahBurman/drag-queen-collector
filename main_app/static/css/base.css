@@ -193,6 +193,10 @@ nav li {
   max-width: 100px;
 }
 
+img {
+  border-radius: 10px;
+}
+
 .aboutcard{
   border: #f543a1 solid 2px;
   box-shadow:  5px 5px 6px -1px #AAA;
