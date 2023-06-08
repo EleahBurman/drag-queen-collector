@@ -41,6 +41,8 @@ Planning materials can be found [here.](https://trello.com/b/qqtAeKX6/drag-queen
 * [Valentina Performing](https://csulauniversitytimes.com/drag-queen-valentina-brings-latinx-culture-to-the-luckman/)
 * [Violet Chachki](https://www.gaytimes.co.uk/culture/violet-chachki-reveals-her-conspiracy-theory-about-drag-race-season-7/)
 * [Willam](https://www.timeout.com/newyork/lgbt/willam-talks-about-losing-drag-race-and-winning-the-internet)
+* [Pink Lipstick](https://stock.adobe.com/images/pink-lipstick-vector-isolated/163188206?asset_id=163188206)
+* [Drag Queen Cartoon](https://stock.adobe.com/contributor/201986866/sayuri-k?load_type=author&prev_url=detail)
 
 ## 🖥️ Technologies Used
 * Python
