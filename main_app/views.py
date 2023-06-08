@@ -30,18 +30,20 @@ def dragqueen_detail(request, dragqueen_id):
 
 @login_required
 def add_outfit(request, dragqueen_id):
-    if request.method == 'POST':
-        form = OutfitForm(request.POST)
-        if form.is_valid():
-            new_outfit = form.save(commit=False)
-            dragqueen = DragQueen.objects.get(id=dragqueen_id)
-            new_outfit.dragqueen = dragqueen
-            new_outfit.save()
-            return redirect('dragqueen-detail', dragqueen_id=dragqueen_id)
-    else:
-        form = OutfitForm()
-    
-    return render(request, 'add_outfit.html', {'form': form})
+  form = OutfitForm(request.POST)
+  if form.is_valid():
+    print('===', form.data)
+    new_outfit = form.save(commit=False)
+    new_outfit.dragqueen_id = dragqueen_id
+    print(dragqueen_id)
+    makeup_options = request.POST.getlist('makeup')
+    print(makeup_options)
+    new_outfit.makeup = ', '.join(makeup_options)
+    print(new_outfit)
+    new_outfit.save()
+  else:
+        print(form.errors)
+  return redirect('dragqueen-detail', dragqueen_id=dragqueen_id)
 
 @login_required
 def delete_outfit(request, dragqueen_id, outfit_id):
