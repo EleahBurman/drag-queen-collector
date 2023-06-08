@@ -80,9 +80,9 @@
       </div>
       <h3 class="outfitheader">Add an Outfit</h3>
       {% if dragqueen.is_dressed_for_today %}
-        <h4 class="dressed">{{ dragqueen.name }} is looking fabulous today!</h4>
+        <h4 class="dressed">{{ dragqueen.name }} is looking fabulous today!💄</h4>
       {% else %}
-        <h4 class="dressed">{{ dragqueen.name }} is looking for the perfect outfit!</h4>
+        <h4 class="dressed">{{ dragqueen.name }} is looking for the perfect outfit!🔎</h4>
       {% endif %}
       <form action="{% url 'add-outfit' dragqueen.id %}" method="post" class="subsection-content" autocomplete="off">
         {% csrf_token %}
@@ -139,7 +139,7 @@
             </div>
           {% endfor %}
         {% else %}
-          <p class="no-performances">{{ dragqueen.name }} doesn't have any performances 😞</p>
+          <p class="no-performances">{{ dragqueen.name }} doesn't have any performances. 😞</p>
         {% endif %}
       </div>
       <h3>Available Performances</h3>
