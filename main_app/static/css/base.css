@@ -2,17 +2,12 @@ html {
   box-sizing: border-box
 }
 
-/* The Universal Selector */
-*, /* All elements*/
-*::before, /* All ::before pseudo-elements */
-*::after { /* All ::after pseudo-elements */
-  /* height & width will now include border & padding by default
-     but can be over-ridden as needed */
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
-/* resets font size to be 62.5% of the user preference - 
-     in most browser configurations this will be 10px */
 :root {
   font-size: 62.5%
 }
@@ -22,12 +17,12 @@ a:-webkit-any-link {
   color: #f543a1;
 }
 
-a:-webkit-any-link :hover{
+a:-webkit-any-link :hover {
   color: #f50887;
   text-decoration: none;
 }
 
-a:-webkit-any-link :visited{
+a:-webkit-any-link :visited {
   color: #f543a1;
   text-decoration: none;
 }

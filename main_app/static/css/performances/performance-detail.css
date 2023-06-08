@@ -23,7 +23,7 @@ main {
   position: relative;
 }
 
-.card-bg{
+.card-bg {
   position: absolute;
   display: inline-flex;
   top: 0;

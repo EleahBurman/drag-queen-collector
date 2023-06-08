@@ -15,7 +15,6 @@ import environ
 import os
 env = environ.Env()
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
@@ -30,7 +29,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'dragqueencollector.fly.dev']
 CSRF_TRUSTED_ORIGINS = ['https://dragqueencollector.fly.dev']
-
 
 # Application definition
 

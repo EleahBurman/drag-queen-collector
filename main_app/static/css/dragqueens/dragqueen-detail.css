@@ -25,91 +25,91 @@
   margin-left: 40px;
 }
 
-.alaska-img{
+.alaska-img {
   width: 75%;
   max-width: 350px;
   margin-left: 40px;
 }
 
-.rupaul-img{
+.rupaul-img {
   width: 30%;
   max-width: 100px;
   margin-left: 40px;
 }
 
-.alyssa-img{
+.alyssa-img {
   width: 75%;
   max-width: 350px;
   margin-left: 40px;
 }
 
-.dela-img{
+.dela-img {
   width: 75%;
   max-width: 350px;
   margin-left: 40px;
 }
 
-.bianca-img{
+.bianca-img {
   width: 75%;
   max-width: 350px;
   margin-left: 40px;
 }
 
-.latrice-img{
+.latrice-img {
   width: 75%;
   max-width: 350px;
   margin-left: 40px;
 }
 
-.manila-img{
+.manila-img {
   width: 75%;
   max-width: 350px;
   margin-left: 40px;
 }
 
-.willam-img{
+.willam-img {
   width: 75%;
   max-width: 350px;
   margin-left: 40px;
 }
 
-.shangela-img{
+.shangela-img {
   width: 75%;
   max-width: 350px;
   margin-left: 40px;
 }
 
-.bob-img{
+.bob-img {
   width: 75%;
   max-width: 350px;
   margin-left: 40px;
 }
 
-.trixie-img{
+.trixie-img {
   width: 75%;
   max-width: 350px;
   margin-left: 40px;
 }
 
-.kimchi-img{
+.kimchi-img {
   width: 75%;
   max-width: 350px;
   margin-left: 40px;
 }
 
-.monet-img{
+.monet-img {
   width: 75%;
   max-width: 350px;
   margin-left: 40px;
 }
 
-.violet-img{
+.violet-img {
   width: 75%;
   max-width: 350px;
   margin-left: 40px;
 }
 
-.detox-img{
+.detox-img {
   width: 75%;
   max-width: 350px;
   margin-left: 40px;
@@ -142,7 +142,7 @@
   padding:0;
 }
 
-p.no-performances{
+p.no-performances {
   color: #f543a1;
   margin: 0;
   padding:0;
@@ -162,13 +162,13 @@ p.no-performances{
   margin-bottom: 12px;
 }
 
-.performance-container a{
+.performance-container a {
   display: flex;
   align-items: center;
   margin-bottom: 5px;
 }
 
-.performance-container a h3{
+.performance-container a h3 {
   font-size: 20px;
 }
 
@@ -302,7 +302,7 @@ p.no-performances{
   margin-bottom: 10px;
 }
 
-a.warn, a.danger{
+a.warn, a.danger {
   margin: 5px;
 }
 
