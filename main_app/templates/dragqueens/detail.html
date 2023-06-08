@@ -129,20 +129,37 @@
         <img src="{% static 'images/dragqueenblackdress.png' %}" alt="Drag Queen Black Dress" />
       </div>
       <h3>{{ dragqueen.name }}'s Performances</h3>
+      {% if dragqueen.performing_today %}
+        <h4 class="performing">{{ dragqueen.name }} is performing today! 🎉</h4>
+      {% else %}
+        <h4 class="performing">{{ dragqueen.name }} isn't booked for today! Book {{dragqueen.name}} 📅</h4>
+      {% endif %}
       <div class="subsection-content">
         {% if dragqueen.performances.count %}
           {% for performance in dragqueen.performances.all %}
             <div class="performance-container">
               <a href="{% url 'performance-detail' performance.id %}">
-                <img src="{% static 'images/rupaul.png' %}" alt="Rupaul" class="rupaul-img" width="50px" />
-                <h3>{{ performance.show }}</h3>
+                <table>
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>Show</th>
+                      <th>Date</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><img src="{% static 'images/rupaul.png' %}" alt="Rupaul" class="rupaul-img" width="50px" /></td>
+                      <td>{{ performance.show }}</td>
+                      <td>{{ performance.date }}</td>
+                    </tr>
+                  </tbody>
+                </table>
               </a>
             </div>
           {% endfor %}
-        {% else %}
-          <p class="no-performances">{{ dragqueen.name }} doesn't have any performances. 😞</p>
         {% endif %}
-      </div>
+      </div>      
       <h3>Available Performances</h3>
       <div class="subsection-content">
         {% if performances.count %}

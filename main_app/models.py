@@ -57,7 +57,7 @@ WIG_CHOICES = (
 )
 
 MAKEUP_CHOICES = (
-  ('mascara', 'Mascara'),
+  ('Mascara', 'Mascara'),
   ('Face Primer', 'Face Primer'),
   ('Foundation', 'Foundation'),
   ('Highlighter', 'Highlighter'),
@@ -122,6 +122,9 @@ class DragQueen(models.Model):
   
   def is_dressed_for_today(self):
     return self.outfit_set.filter(date=date.today()).exists()
+  
+  def is_performing_today(self):
+    return self.performances.filter(date=date.today()).exists()
   
 class Outfit(models.Model):
     date = models.DateField('Date',  default=get_default_date)
