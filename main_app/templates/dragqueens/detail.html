@@ -53,17 +53,16 @@
     <div class="dragqueen-details">
       <h2 class="pink">{{ dragqueen.name }}</h2>
       {% if dragqueen.winner %}
-        <h3>A winner, darling, on season {{ dragqueen.season }}</h3>
+        <h3>A winner, darling, on season {{ dragqueen.season }}.</h3>
       {% elif dragqueen.winnerofallstars %}
-        <h3>A winner, darling, on all-stars season {{ dragqueen.allstars }}</h3>
+        <h3>A winner, darling, on all-stars season {{ dragqueen.allstars }}.</h3>
       {% elif dragqueen.allstars %}
-        <h3>A winner in our hearts on season {{ dragqueen.season }} and all-stars season {{ dragqueen.allstars }}</h3>
+        <h3>A winner in our hearts on season {{ dragqueen.season }} and all-stars season {{ dragqueen.allstars }}.</h3>
       {% else %}
         <h3>There's always All-Stars!</h3>
       {% endif %}
-      <h3>Known for her {{ dragqueen.specialty }}.</h3>
-      <br/>
-      <h3>Follow her <a href="http://www.instagram.com/{{ dragqueen.instagramhandle }}" id="here">here</a></h3>
+      <h3>Known for her {{ dragqueen.specialty|lower }}.</h3>
+      <h3>Follow her <a href="http://www.instagram.com/{{ dragqueen.instagramhandle }}" id="here">here.</a></h3>
     </div>
     <div class="dragqueen-actions">
       <a href="{% url 'dragqueen-update' dragqueen.id %}" class="btn warn">Edit</a>
