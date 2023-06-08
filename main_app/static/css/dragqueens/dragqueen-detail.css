@@ -274,20 +274,24 @@ p.no-performances {
   padding: 3px;
 }
 
-.outfits table {
+.outfits table,
+.performances table {
   width: calc(100% - 16px);
   text-align: left;
   border-collapse: collapse;
 }
 
-.outfits td {
+.outfits td,
+.performances td {
   padding: 8px 5px;
   font-size: var(--font-reg);
 }
 
-.outfits th {
+.outfits th,
+.performances th {
   font-size: var(--font-l);
   padding: 5px 5px 0;
+  font: black;
   border-bottom: black solid 2px;
 }
 
