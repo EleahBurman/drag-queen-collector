@@ -18,24 +18,6 @@
   text-decoration: underline;
 }
 
-.katya-img {
-  width: 75%;
-  max-width: 350px;
-  margin-left: 40px;
-}
-
-.rupaul-card-img {
-  width: 75%;
-  max-width: 350px;
-  margin-left: 40px;
-}
-
-.alaska-img {
-  width: 75%;
-  max-width: 350px;
-  margin-left: 40px;
-}
-
 .rupaul-img {
   width: 30%;
   max-width: 100px;
@@ -43,78 +25,21 @@
   margin-bottom: 5px;
 }
 
-.alyssa-img {
-  width: 75%;
-  max-width: 350px;
-  margin-left: 40px;
-}
-
-.dela-img {
-  width: 75%;
-  max-width: 350px;
-  margin-left: 40px;
-}
-
-.bianca-img {
-  width: 75%;
-  max-width: 350px;
-  margin-left: 40px;
-}
-
-.latrice-img {
-  width: 75%;
-  max-width: 350px;
-  margin-left: 40px;
-}
-
-.manila-img {
-  width: 75%;
-  max-width: 350px;
-  margin-left: 40px;
-}
-
-.willam-img {
-  width: 75%;
-  max-width: 350px;
-  margin-left: 40px;
-}
-
-.shangela-img {
-  width: 75%;
-  max-width: 350px;
-  margin-left: 40px;
-}
-
-.bob-img {
-  width: 75%;
-  max-width: 350px;
-  margin-left: 40px;
-}
-
-.trixie-img {
-  width: 75%;
-  max-width: 350px;
-  margin-left: 40px;
-}
-
-.kimchi-img {
-  width: 75%;
-  max-width: 350px;
-  margin-left: 40px;
-}
-
-.monet-img {
-  width: 75%;
-  max-width: 350px;
-  margin-left: 40px;
-}
-
-.violet-img {
-  width: 75%;
-  max-width: 350px;
-  margin-left: 40px;
-}
-
+.katya-img,
+.rupaul-card-img,
+.alaska-img,
+.alyssa-img, 
+.dela-img,
+.bianca-img,
+.latrice-img,
+.manila-img,
+.willam-img,
+.shangela-img,
+.bob-img,
+.trixie-img,
+.kimchi-img,
+.monet-img,
+.violet-img,
 .detox-img {
   width: 75%;
   max-width: 350px;
@@ -141,21 +66,9 @@
   padding:0;
 }
 
-.dressed {
-  font-size: 18px;
-  color: #f543a1;
-  margin: 0;
-  padding:0;
-}
-
-.performing {
-  font-size: 18px;
-  color: #f543a1;
-  margin: 0;
-  padding:0;
-}
-
-.past-outfits{
+.dressed,
+.performing,
+.past-outfits {
   font-size: 18px;
   color: #f543a1;
   margin: 0;
