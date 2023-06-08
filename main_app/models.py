@@ -85,7 +85,7 @@ MAKEUP_CHOICES = (
 class Performance(models.Model):
   show = models.CharField(max_length=200, default='Planet Pride')
   venue = models.CharField(max_length=100, default='Heart')
-  date = models.DateField(default=date.today)
+  date = models.DateField('Performance date')
   time = models.CharField(default='8pm',max_length=10)
   website = models.URLField(default='https://www.heartweho.com/', blank=True, null=True)
 
@@ -112,21 +112,17 @@ class DragQueen(models.Model):
   performances = models.ManyToManyField(Performance)
   user = models.ForeignKey(User, on_delete=models.CASCADE)
   
-  def is_dressed_for_today(self):
-    today = date.today()
-    has_outfit = self.outfit_set.get(date=today)
-    if has_outfit:
-      return f"{self.name} is looking fabulous today!"
-    else:
-      return f"{self.name} needs an outfit for today!"
   def __str__(self):
     return self.name
   
   def get_absolute_url(self):
       return reverse("dragqueen_detail", kwargs={"dragqueen_id": self.id})
+  
+  def is_dressed_for_today(self):
+    return self.outfit_set.filter(date=date.today()).exists()
 
 class Outfit(models.Model):
-    date = models.DateField(default=date.today)
+    date = models.DateField('Outfit date')
     clothes = models.CharField(
       max_length=100, 
       choices=CLOTHES_CHOICES,
