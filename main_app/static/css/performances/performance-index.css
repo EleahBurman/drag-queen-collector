@@ -6,8 +6,8 @@
 }
 
 .card {
-  width: 224px;
-  height: 224px;
+  width: 250px;
+  height: 250px;
   margin: 10px;
   border: #f543a1 solid 2px;
   box-shadow: var(--card-box-shadow);
@@ -30,13 +30,15 @@
 }
 
 .card-content {
-  padding: 15px;
-  height: 100%;
-  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
   flex-direction: column;
+  justify-content: flex-end;
+  padding: 15px;
 }
 
 .card > a {
@@ -51,8 +53,9 @@
 }
 
 .card h2 {
-  margin: 7px 0;
+  margin: 8px 0;
   font-size: var(--font-xl);
+  text-align: right;
 }
 
 .card p {
@@ -70,4 +73,5 @@
 
 .shangela-performing {
   width: 100%;
+  margin-top: 20px;
 }
