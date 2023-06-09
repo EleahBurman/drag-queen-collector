@@ -1,4 +1,8 @@
-![Drag Queen Collector](/main_app/static/images/logodragqueen.png)
+# Drag Queen Collector
+## Drag Queen Collector Logo
+![Drag Queen Collector Logo](/main_app/static/images/logodragqueen.png)
+## Drag Queen Collector Screenshot
+![Drag Queen Collector Screenshot](/main_app/static/images/screenshotofdragqueencollector.png)
 
 # [Drag Queen](https://dragqueencollector.fly.dev/)
 ## Features
