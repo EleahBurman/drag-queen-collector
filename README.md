@@ -38,7 +38,7 @@ Planning materials can be found [here.](https://trello.com/b/qqtAeKX6/drag-queen
 * [Manila Luzon](https://www.outfrontmagazine.com/manila-luzon-among-first-queens-to-kick-off-digital-drag-fest/)
 * [Monet X Change](https://ew.com/tv/who-did-monet-x-change-hook-up-with-rupauls-drag-race-all-stars-7/)
 * [RuPaul](https://ew.com/tv/2020/02/19/rupauls-drag-race-meet-the-queens-sweepstakes-official-rules/)
-* [RuPaul Logo](https://soundcloud.com/rupaulofficial)\
+* [RuPaul Logo](https://soundcloud.com/rupaulofficial)
 * [Shangela](https://shangela.com/)
 * [Shangela Performing](https://www.popsugar.com/entertainment/Shangela-Beyonc%C3%A9-Performance-GLAAD-Media-Awards-Video-45972553)
 * [Trixie Mattel](https://www.allmusic.com/artist/trixie-mattel-mn0003634361/biography)
@@ -65,5 +65,4 @@ Planning materials can be found [here.](https://trello.com/b/qqtAeKX6/drag-queen
 - [ ] **Social Media Integration**: Experience the thrill of being a drag queen influencer by dynamically changing the follower count on your drag queen's social media profiles. Watch your drag queen's Instagram, Twitter, and Facebook follower counts soar!
 - [ ] **User Uploads**: Showcase your creativity by uploading photos of yourself or your favorite drag queens on your user page. Share your drag queen transformations and get inspired by others in the community.
 - [ ] **Change Password**: Can't remember your password? Change your password with ease by using the change a password feature!
-- [ ] **Card Sizes**:  Let your creativity break free from the confines of standard card sizes! With the power of JQuery and JavaScript, dynamically adjust the size of your drag queen cards. Make a bold statement with larger-than-life cards or opt for a sleek and compact look – the choice is yours!
 - [ ] **Choose Multiple Makeup Options**: Embrace the artistry of drag makeup and create show-stopping looks! Select not just one, but multiple makeup options for your drag queen creations. Thanks to the magic of Django's Select2 feature, explore an extensive range of makeup choices and curate breathtaking combinations that will leave everyone gasping in awe!
