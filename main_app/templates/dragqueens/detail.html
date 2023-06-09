@@ -10,6 +10,7 @@
 {% endblock %}
 
 {% block content %}
+
   <section class="dragqueen-container">
     <div class="card">
       {% with lowercase_name=dragqueen.name|lower %}
@@ -69,7 +70,9 @@
       <a href="{% url 'dragqueen-delete' dragqueen.id %}" class="btn danger">Delete</a>
     </div>
   </section>
+
   <div class="outfits-performances-container">
+
     <section class="outfits">
       <div class="subsection-title">
         <h2>Outfits</h2>
@@ -88,7 +91,6 @@
         {{ outfit_form.as_p }}
         <button type="submit" class="btn submit">Add an Outfit</button>
       </form>
-      
       <h3>Past Outfits</h3>
       <h4 class="past-outfits">10s, 10s, 10s, across the board! 🔟</h4>
       <table class="table">
@@ -120,6 +122,7 @@
         </tbody>
       </table>
     </section>
+
     <section class="performances">
       <div class="subsection-title">
         <h2>Performances</h2>
@@ -181,6 +184,7 @@
         {% endif %}
       </div>
     </section>
+    
   </div>
 </div>
 
