@@ -117,10 +117,10 @@ nav li {
 }
 
 .header-logo-container {
-  margin: auto;
   max-width: 500px;
   height: 100%;
   margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .header-logo-image{
@@ -236,9 +236,9 @@ img {
     height: 40px;
   }
 
-  /* visual fix to help align logo */
   .header-logo-container {
     padding-top: 3px;
+    margin-bottom: 10px;
   }
 
   .header-logo-image{
@@ -309,7 +309,6 @@ img {
   }
 
   .header-logo-container {
-    /* visual fix to help align logo */
     padding-top: 6px;
     width: 256px;
     height: 35px;
