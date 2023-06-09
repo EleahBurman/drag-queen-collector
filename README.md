@@ -59,6 +59,8 @@ Planning materials can be found [here.](https://trello.com/b/qqtAeKX6/drag-queen
 * Fly.io
 * Bit.io
 * Photoshop
+* Whitenoise
+* Gunicorn
 
 ## 🧊 Ice Box
 - [ ] **Drag and Drop**: Drag and drop wigs, make-up, and clothing onto a drag queen photo to create unique and fabulous looks.
