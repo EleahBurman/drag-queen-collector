@@ -31,6 +31,13 @@ h1.titletext {
   font: 42px;
 }
 
+.description-about {
+  font-size: 18px;
+  color: #f543a1;
+  margin: 0;
+  padding:0;
+}
+
 body {
   margin: 0;
   display: flex;
@@ -198,7 +205,7 @@ img {
 }
 
 .aboutcard{
-  border: #f543a1 solid 2px;
+  border: black solid 2px;
   box-shadow:  5px 5px 6px -1px #AAA;
   max-width: fit-content;
   text-align: left;
