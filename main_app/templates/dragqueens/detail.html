@@ -13,54 +13,67 @@
 
   <section class="dragqueen-container">
     <div class="card">
-      {% with lowercase_name=dragqueen.name|lower %}
-        {% if 'katya' in lowercase_name %}
-          <img src="{% static 'images/katya.png' %}" alt="Katya Zamolodchikova" class="katya-img">
-        {% elif 'rupaul' in lowercase_name %}
-          <img src="{% static 'images/rupaul.png' %}" alt="RuPaul Charles" class="rupaulcard-img">
-        {% elif 'alaska' in lowercase_name %}
-          <img src="{% static 'images/alaska.png' %}" alt="Alaska" class="alaska-img">
-        {% elif 'alyssa' in lowercase_name %}
-          <img src="{% static 'images/alyssaedwards.png' %}" alt="Alyssa Edwards" class="alyssa-img">
-        {% elif 'dela' in lowercase_name %}
-          <img src="{% static 'images/bendelacreme.png' %}" alt="Ben De La Creme" class="bendelacreme-img">
-        {% elif 'bianca' in lowercase_name %}
-          <img src="{% static 'images/biancadelrio.png' %}" alt="Bianca Del Rio" class="bianca-img">
-        {% elif 'latrice' in lowercase_name %}
-          <img src="{% static 'images/latrice.png' %}" alt="Latrice Royale" class="latrice-img">
-        {% elif 'manila' in lowercase_name %}
-          <img src="{% static 'images/manila.png' %}" alt="Manila Luzon" class="manila-img">
-        {% elif 'willam' in lowercase_name %}
-          <img src="{% static 'images/willam.png' %}" alt="Willam" class="willam-img">
-        {% elif 'shangela' in lowercase_name %}
-          <img src="{% static 'images/shangela.png' %}" alt="Shangela" class="shangela-img">
-        {% elif 'bob' in lowercase_name %}
-          <img src="{% static 'images/bobthedragqueen.png' %}" alt="Bob The Drag Queen" class="bob-img">
-        {% elif 'trixie' in lowercase_name %}
-          <img src="{% static 'images/trixiemattel.png' %}" alt="Trixie Mattel" class="trixie-img">
-        {% elif 'kimchi' in lowercase_name %}
-          <img src="{% static 'images/kimchi.png' %}" alt="Kim Chi" class="kimchi-img">
-          {% elif 'monet' in lowercase_name %}
-          <img src="{% static 'images/monet.png' %}" alt="Monet X Change" class="monet-img">
-        {% elif 'violet' in lowercase_name %}
-          <img src="{% static 'images/violet.png' %}" alt="Violet Chachki" class="violet-img">
-        {% elif 'detox' in lowercase_name %}
-          <img src="{% static 'images/detox.png' %}" alt="Detox" class="detox-img">
+      <div class="dragqueen-img">
+        {% if dragqueen.photo.url %}
+          <div class="dragimage">
+            <img 
+              src="{{dragqueen.photo.url}}" 
+              alt="My photo of {{dragqueen.name}}"
+              class="usr-img"
+            >
+          </div>
         {% else %}
-          <img src="{% static 'images/katya.png' %}" alt="Katya Zamolodchikova" class="katya-img">
+          <div class="dragqueen-img">
+            {% with lowercase_name=dragqueen.name|lower %}
+              {% if 'katya' in lowercase_name %}
+                <img src="{% static 'images/katya.png' %}" alt="Katya Zamolodchikova" class="katya-img">
+              {% elif 'rupaul' in lowercase_name %}
+                <img src="{% static 'images/rupaul.png' %}" alt="RuPaul Charles" class="rupaulcard-img">
+              {% elif 'alaska' in lowercase_name %}
+                <img src="{% static 'images/alaska.png' %}" alt="Alaska" class="alaska-img">
+              {% elif 'alyssa' in lowercase_name %}
+                <img src="{% static 'images/alyssaedwards.png' %}" alt="Alyssa Edwards" class="alyssa-img">
+              {% elif 'dela' in lowercase_name %}
+                <img src="{% static 'images/bendelacreme.png' %}" alt="Ben De La Creme" class="bendelacreme-img">
+              {% elif 'bianca' in lowercase_name %}
+                <img src="{% static 'images/biancadelrio.png' %}" alt="Bianca Del Rio" class="bianca-img">
+              {% elif 'latrice' in lowercase_name %}
+                <img src="{% static 'images/latrice.png' %}" alt="Latrice Royale" class="latrice-img">
+              {% elif 'manila' in lowercase_name %}
+                <img src="{% static 'images/manila.png' %}" alt="Manila Luzon" class="manila-img">
+              {% elif 'willam' in lowercase_name %}
+                <img src="{% static 'images/willam.png' %}" alt="Willam" class="willam-img">
+              {% elif 'shangela' in lowercase_name %}
+                <img src="{% static 'images/shangela.png' %}" alt="Shangela" class="shangela-img">
+              {% elif 'bob' in lowercase_name %}
+                <img src="{% static 'images/bobthedragqueen.png' %}" alt="Bob The Drag Queen" class="bob-img">
+              {% elif 'trixie' in lowercase_name %}
+                <img src="{% static 'images/trixiemattel.png' %}" alt="Trixie Mattel" class="trixie-img">
+              {% elif 'kimchi' in lowercase_name %}
+                <img src="{% static 'images/kimchi.png' %}" alt="Kim Chi" class="kimchi-img">
+                {% elif 'monet' in lowercase_name %}
+                <img src="{% static 'images/monet.png' %}" alt="Monet X Change" class="monet-img">
+              {% elif 'violet' in lowercase_name %}
+                <img src="{% static 'images/violet.png' %}" alt="Violet Chachki" class="violet-img">
+              {% elif 'detox' in lowercase_name %}
+                <img src="{% static 'images/detox.png' %}" alt="Detox" class="detox-img">
+              {% else %}
+                <img src="{% static 'images/katya.png' %}" alt="Katya Zamolodchikova" class="katya-img">
+              {% endif %}
+            {% endwith %}
+          </div>
         {% endif %}
-      {% endwith %}
     </div>
     <div class="dragqueen-details">
       <h2 class="pink">{{ dragqueen.name }}</h2>
       {% if dragqueen.winner %}
-        <h3>A winner, darling, on season {{ dragqueen.season }}.</h3>
+      <h3>A winner, darling, on season {{ dragqueen.season }}.</h3>
       {% elif dragqueen.winnerofallstars %}
-        <h3>A winner, darling, on all-stars season {{ dragqueen.allstars }}.</h3>
+      <h3>A winner, darling, on all-stars season {{ dragqueen.allstars }}.</h3>
       {% elif dragqueen.allstars %}
-        <h3>A winner in our hearts on season {{ dragqueen.season }} and all-stars season {{ dragqueen.allstars }}.</h3>
+      <h3>A winner in our hearts on season {{ dragqueen.season }} and all-stars season {{ dragqueen.allstars }}.</h3>
       {% else %}
-        <h3>There's always All-Stars!</h3>
+      <h3>There's always All-Stars!</h3>
       {% endif %}
       <h3>Known for her {{ dragqueen.specialty|lower }}.</h3>
       <h3>Follow her <a href="http://www.instagram.com/{{ dragqueen.instagramhandle }}" id="here">here.</a></h3>
@@ -69,8 +82,27 @@
       <a href="{% url 'dragqueen-update' dragqueen.id %}" class="btn warn">Edit</a>
       <a href="{% url 'dragqueen-delete' dragqueen.id %}" class="btn danger">Delete</a>
     </div>
+    <div class="addphoto-container">
+      <div class="addphoto">
+        <h3 class="photoheader">Add Photo of {{ dragqueen.name }}</h3>
+        <p id="file-name"></p>
+        <form 
+          action="{% url 'add-photo' dragqueen.id %}"
+          enctype="multipart/form-data"
+          method="POST"
+        >
+          {% csrf_token %}
+          <label class="btn upload">
+            Choose photo
+            <input type="file" name="photo-file" id="file-input">
+          </label>
+          <button type="submit" class="btn submit">Upload Photo</button>
+        </form>
+      </div>
+    </div>
   </section>
 
+  
   <div class="outfits-performances-container">
 
     <section class="outfits">
@@ -184,7 +216,6 @@
         {% endif %}
       </div>
     </section>
-    
   </div>
 </div>
 

@@ -165,7 +165,9 @@ nav li {
   border-color: var(--secondary);
 }
 
-.warn {
+.warn,
+.upload,
+.submit {
   color: var(--warn);
   border-color: var(--warn);
   margin-bottom: 10px;
@@ -176,6 +178,7 @@ nav li {
   border-color: var(--danger);
   margin-top: 10px;
 }
+
 
 .page-header h1 {
   font-size: var(--font-xxl);

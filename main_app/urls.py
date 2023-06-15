@@ -12,6 +12,7 @@ urlpatterns = [
   path('dragqueens/<int:dragqueen_id>/add-outfit/', views.add_outfit, name='add-outfit'),
   path('dragqueens/<int:dragqueen_id>/delete-outfit/<int:outfit_id>/', views.delete_outfit, name='delete-outfit'),
   path('dragqueens/<int:dragqueen_id>/assoc-performance/<int:performance_id>', views.assoc_performance, name='assoc-performance'),
+  path('dragqueens/<int:dragqueen_id>/add-photo', views.add_photo, name='add-photo'),
   path('accounts/signup/', views.signup, name='signup'),
   path('performances/create/', views.PerformanceCreate.as_view(), name='performance-create'),
   path('performances/<int:pk>/', views.PerformanceDetail.as_view(), name='performance-detail'),

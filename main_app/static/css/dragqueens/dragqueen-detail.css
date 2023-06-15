@@ -5,12 +5,34 @@
 .dragqueen-container {
   padding: 35px 30px;
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: #f543a1 solid 2px;
+  box-shadow:  5px 5px 6px -1px #AAA;
+  margin-bottom: 20px;
+}
+
+.dragqueen-details {
+  width: 98%;
+  margin-left: 37px;
+  flex-direction: column;
+}
+
+.addphoto-container {
+  padding: 25px 30px;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border: #f543a1 solid 2px;
   box-shadow:  5px 5px 6px -1px #AAA;
-  margin-bottom: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.photoheader{
+  font-size: 18px;
 }
 
 .pink {
@@ -45,8 +67,8 @@
 .monet-img,
 .violet-img,
 .detox-img {
-  width: 75%;
-  max-width: 350px;
+  width: 60%;
+  max-width: 200px;
   margin-left: 40px;
 }
 
@@ -55,14 +77,11 @@
   border-radius: var(--card-border-radius);
 }
 
-.dragqueen-details {
-  width: 98%;
-}
-
 .dragqueen-actions {
   display: flex;
   align-items: center;
   margin-top: 20px;
+  margin-left: 35px;
 }
 
 .outfitheader {
@@ -91,6 +110,7 @@ p.no-performances {
   flex-direction: column;
   padding-bottom: 20px;
   align-items: center;
+  margin-top: 10px;
 }
 
 .subsection-title {
@@ -265,6 +285,7 @@ a.warn, a.danger {
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
+    margin-top: 10px;
   }
 
   .outfits-performances-container > section {
@@ -275,5 +296,6 @@ a.warn, a.danger {
 @media only screen and (min-width: 1024px) {
   .outfits-performances-container {
     padding: 0 40px;
+    margin-top: 10px;
   }
 }
